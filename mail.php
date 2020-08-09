@@ -21,7 +21,7 @@ header("Access-Control-Allow-Origin: *");
         }
  
         // Set the recipient email address.
-        $recipient = "test@hasthemes.com";
+        $recipient = "justswimsg@outlook.com";
  
         // Set the email subject.
         $subject = "$subject - Mail From $name";
