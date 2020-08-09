@@ -139,7 +139,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="register-form mt-80 mb-80">
-                                <form action="#">
+                                <form id="contact-form" action="https://justswimsg.000webhostapp.com/register.php" method="post">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="register-field">
@@ -163,22 +163,22 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="register-field">
-                                                <label for="town_city">town</label>
-                                                <input type="text" name="town_city" id="town_city" placeholder="District or Nearest MRT Station">
+                                                <label for="phone_number">phone number</label>
+                                                <input type="text" name="phone" id="phone" placeholder="Phone number">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="register-field">
-                                                <label for="zipCode">zip code</label>
-                                                <input type="text" name="zipCode" id="zipCode" placeholder="Zip code">
+                                                <label for="town_city">town</label>
+                                                <input type="text" name="town" id="town" placeholder="District or Nearest MRT Station">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="register-field">
-                                                <label for="phone_number">phone number</label>
-                                                <input type="text" name="phone_number" id="phone_number" placeholder="Phone number">
+                                                <label for="zipCode">zip code</label>
+                                                <input type="text" name="zipcode" id="zipcode" placeholder="Zip code">
                                             </div>
                                         </div>
                                     </div>
@@ -193,26 +193,33 @@
                                             <div class="register-field">
                                                 <label for="course_cats">Course category</label>
                                                 <select name="course_cats" id="course_cats">
-                                                    <option value="baby_shark">Baby Shark</option>
-                                                    <option value="young_dolphin">Young Dolphin</option>
-                                                    <option value="speedy_swordfish">Speedy Swordfish</option>
-                                                    <option value="special_bespoke">Special Bespoke Sessions</option>
-                                                    <option value="group_class">Group Sessions</option>
+                                                    <option value="Baby">Baby Shark</option>
+                                                    <option value="Kids">Young Dolphin</option>
+                                                    <option value="Adult">Speedy Swordfish</option>
+                                                    <option value="Bespoke">Special Bespoke Sessions</option>
+                                                    <option value="Group">Group Sessions</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
+                                    
                                     <div class="row">
                                         <div class="col-lg-6">
+                                        <!--
                                             <div class="remind">
                                                 <input type="checkbox" name="remind_me" id="remind_me">
                                                 <label for="remind_me">Remind me as a Text</label>
                                             </div>
+                                        -->
+                                        
                                         </div>
                                         <div class="col-lg-6 text-left">
                                             <button type="submit" class="submit">submit now</button>
+                                            <br><p class="form-messege"></p>
                                         </div>
                                     </div>
+
+
                                 </form>
                             </div>
                         </div>
