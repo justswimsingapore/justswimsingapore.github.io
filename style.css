@@ -1302,7 +1302,6 @@ p.hover{
     border: 1px solid #DDDDDD;
     height: 40px;
     background: transparent;
-    text-transform: capitalize;
 }
 .remind > input {
     display: inline-block;
