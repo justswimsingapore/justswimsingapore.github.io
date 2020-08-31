@@ -24,7 +24,7 @@ header("Access-Control-Allow-Origin: *");
         $recipient = "justswimsg@outlook.com";
  
         // Set the email subject.
-        $subject = "$subject - Mail From $name";
+        $subject = "$subject - Contact Form From $name";
  
         // Build the email content.
         $email_content = "Name: $name\n";
@@ -33,7 +33,10 @@ header("Access-Control-Allow-Origin: *");
         $email_content .= "Message:\n$message\n";
  
         // Build the email headers.
-        $email_headers = "From: $name <$email>";
+        $email_headers = array(
+            'From' => 'contact@swimminglessonssingapore.com',
+            'Reply-To' => $email
+        );
  
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {

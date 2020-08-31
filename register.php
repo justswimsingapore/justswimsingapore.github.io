@@ -38,7 +38,10 @@ header("Access-Control-Allow-Origin: *");
         $email_content .= "Course: $course_cats\n";
  
         // Build the email headers.
-        $email_headers = "From: $name <$email>";
+        $email_headers = array(
+            'From' => 'register@swimminglessonssingapore.com',
+            'Reply-To' => $email
+        );
  
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
