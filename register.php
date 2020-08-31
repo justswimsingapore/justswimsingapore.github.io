@@ -14,6 +14,14 @@ header("Access-Control-Allow-Origin: *");
         $number_students = strip_tags(trim($_POST["number_students"]));
         $course_cats = strip_tags(trim($_POST["course_cats"]));
  
+        //honey pot field
+        $honeypot = $_POST['middlename'];
+        if( !empty( $honeypot ) ){
+            http_response_code(200);
+            echo "Thank You! Have a nice day!";
+            exit;
+        }
+ 
         // Check that data was sent to the mailer.
         if ( empty($f_name) OR empty($l_name) OR empty($email) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.

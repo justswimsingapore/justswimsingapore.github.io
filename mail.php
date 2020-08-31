@@ -11,6 +11,14 @@ header("Access-Control-Allow-Origin: *");
         $phone = strip_tags(trim($_POST["phone"]));
         $subject = strip_tags(trim($_POST["subject"]));
         $message = trim($_POST["message"]);
+
+        //honey pot field
+        $honeypot = $_POST['middlename'];
+        if( !empty( $honeypot ) ){
+            http_response_code(200);
+            echo "Thank You! Have a nice day!";
+            exit;
+        }
  
         // Check that data was sent to the mailer.
         if ( empty($f_name) OR empty($l_name) OR empty($email) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
